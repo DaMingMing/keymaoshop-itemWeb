@@ -19,7 +19,7 @@
 	<dubbo:application name="keymaoshop-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.27.101:2181,192.168.27.102:2182,192.168.184.27:2183" />
 
-	<!--<dubbo:reference interface="com.keymao.content.service.ContentService" id="contentService"/>-->
+	<dubbo:reference interface="com.keymao.service.ItemService" id="itemService"/>
 
 
 
