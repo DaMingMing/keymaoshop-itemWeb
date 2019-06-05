@@ -25,11 +25,15 @@
 
 	<context:component-scan base-package="com.keymao.item.controller" />
 
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!--整合jsp-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-
+	<!--整合freemarker-->
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/WEB-INF/ftl/" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
 </beans>
